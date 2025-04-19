@@ -1,18 +1,3 @@
-async function init(){
- 
-    // Memanggil model tfjs
-    model = await tf.loadLayersModel('http://127.0.0.1:8887/tfjs_model/model.json');
-    isModelLoaded = true;
- 
-    //Memanggil word_index
-    const word_indexjson = await fetch('http://127.0.0.1:8887/word_index.json');
-    word2index = await word_indexjson.json();
- 
-    console.log(model.summary());
-    console.log('Model & Metadata Loaded Successfully');
-}
-Setelah semua tahap dilakukan, file 'script.js' Anda akan terlihat seperti ini:
-
 // ----Kolom deklarasi variabel-----
 let input = document.querySelector('input');
 let button = document.querySelector('button');
